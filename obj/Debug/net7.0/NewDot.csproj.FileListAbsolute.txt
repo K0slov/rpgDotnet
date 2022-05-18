@@ -1,0 +1,15 @@
+/home/icaro/NewDot/bin/Debug/net7.0/NewDot
+/home/icaro/NewDot/bin/Debug/net7.0/NewDot.deps.json
+/home/icaro/NewDot/bin/Debug/net7.0/NewDot.runtimeconfig.json
+/home/icaro/NewDot/bin/Debug/net7.0/NewDot.dll
+/home/icaro/NewDot/bin/Debug/net7.0/NewDot.pdb
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.csproj.AssemblyReference.cache
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.GeneratedMSBuildEditorConfig.editorconfig
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.AssemblyInfoInputs.cache
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.AssemblyInfo.cs
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.csproj.CoreCompileInputs.cache
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.dll
+/home/icaro/NewDot/obj/Debug/net7.0/refint/NewDot.dll
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.pdb
+/home/icaro/NewDot/obj/Debug/net7.0/NewDot.genruntimeconfig.cache
+/home/icaro/NewDot/obj/Debug/net7.0/ref/NewDot.dll
