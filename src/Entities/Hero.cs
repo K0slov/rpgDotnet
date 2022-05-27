@@ -1,27 +1,60 @@
+using NewDot;
+using System;
+
 namespace NewDot.src.Entities
 {
-    public class Hero
+    public class Hero : dadosBase
     {
-        public Hero(string Name, int Level, string HeroType, int Life)
+        public Hero(string name, int level, TypeClass heroType, int life)
         {
-            this.Name = Name;
-            this.Level = Level;
-            this.HeroType = HeroType;
-            this.Life = Life;
+            this.Name = name;
+            this.Level = level;
+            this.HeroType = heroType;
+            this.Life = life;
+            this.Excluido = false;
         }
-        public string Name;
+        public string Name { get; set; }
         public int Level;
-        public string HeroType;
+        public TypeClass HeroType {get; set; }
+        private bool Excluido { get; set; }
         public int Life;
-
-        public override string ToString()
-        {
-            return "Name: " + this.Name + " " + "Life: " + this.Life + "\n" +"Level: " + this.Level + " " + "Hero Type: " + this.HeroType + "\n";
-        }
 
         public virtual string Attack(int Bonus)
         {
             return this.Name + " Atacou usando bola de fogo";
+        }
+
+        public override string ToString()
+        {
+            
+            string retorno = "";
+            retorno += "Classe: " + this.HeroType + Environment.NewLine;
+            retorno += "Titulo: " + this.Name + Environment.NewLine;
+            retorno += "Descrição: " + this.Level + Environment.NewLine;
+            retorno += "Excluido: " + this.Excluido;
+            
+            return retorno;
+        }
+
+        public string retornaTitulo()
+        {
+            return this.Name;
+        }
+        public string retornaCard()
+        {
+            return "ID: " + this.Id + "Name: " + this.Name + " " + "Life: " + this.Life + "\n" +"Level: " + this.Level + " " + "Hero Type: " + this.HeroType + "\n";
+        } 
+        public int retornaId()
+        {
+            return this.Id;
+        }
+        public bool retornaExcluido()
+        {
+            return this.Excluido;
+        }
+        public void Excluir()
+        {
+            this.Excluido = true;
         }
     }
 }
