@@ -2,8 +2,9 @@ namespace NewDot.src.Entities
 {
     public class Wizard : Hero
     {
-        public Wizard(string Name, int Level, TypeClass HeroType, int Life) : base(Name, Level, (TypeClass)HeroType, Life)
+        public Wizard(int Id, string Name, int Level, TypeClass HeroType, int Life) : base(Id, Name, Level, (TypeClass)HeroType, Life)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Level = Level;
             this.HeroType = (TypeClass)HeroType;

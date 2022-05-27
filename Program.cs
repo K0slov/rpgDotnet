@@ -90,17 +90,18 @@ class Program
             Console.Write("Digite a classe entre as opções acima: ");
             int entradaClasse = int.Parse(Console.ReadLine());
 
-            Hero newHero = new Hero(name: entradaNome,
+            Hero newHero = new Hero(id: repositorio.ProximoId(),
+                                    name: entradaNome,
                                     level: 1,
                                     heroType: (TypeClass)entradaClasse,
                                     life: 0);      
             repositorio.Insere(newHero);
 
         string player = NovoJogo();
-        Hero champion = new Hero(entradaNome, 25, (TypeClass)entradaClasse, 80);
+        // Hero champion = new Hero(id, entradaNome, 25, (TypeClass)entradaClasse, 80);
         //Archer support = new Archer("Chronos", 20, "Archer", 70);
 
-        Console.WriteLine(champion);
+        // Console.WriteLine(champion);
         //Console.WriteLine(support);
         //Console.WriteLine(champion.Attack(9));
         //Console.WriteLine(support.Attack(-1));

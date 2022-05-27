@@ -5,14 +5,16 @@ namespace NewDot.src.Entities
 {
     public class Hero : dadosBase
     {
-        public Hero(string name, int level, TypeClass heroType, int life)
+        public Hero(int id, string name, int level, TypeClass heroType, int life)
         {
+            this.Id = id;
             this.Name = name;
             this.Level = level;
             this.HeroType = heroType;
             this.Life = life;
             this.Excluido = false;
         }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Level;
         public TypeClass HeroType {get; set; }
@@ -28,9 +30,10 @@ namespace NewDot.src.Entities
         {
             
             string retorno = "";
+            retorno += "Nome: " + this.Name + Environment.NewLine;
             retorno += "Classe: " + this.HeroType + Environment.NewLine;
-            retorno += "Titulo: " + this.Name + Environment.NewLine;
-            retorno += "Descrição: " + this.Level + Environment.NewLine;
+            retorno += "Nivel: " + this.Level + Environment.NewLine;
+            retorno += "Life: " + this.Life + Environment.NewLine;
             retorno += "Excluido: " + this.Excluido;
             
             return retorno;
@@ -40,10 +43,10 @@ namespace NewDot.src.Entities
         {
             return this.Name;
         }
-        public string retornaCard()
-        {
-            return "ID: " + this.Id + "Name: " + this.Name + " " + "Life: " + this.Life + "\n" +"Level: " + this.Level + " " + "Hero Type: " + this.HeroType + "\n";
-        } 
+        // public string retornaCard()
+        // {
+        //     return "ID: " + this.Id + "Name: " + this.Name + " " + "Life: " + this.Life + "\n" +"Level: " + this.Level + " " + "Hero Type: " + this.HeroType + "\n";
+        // } 
         public int retornaId()
         {
             return this.Id;
