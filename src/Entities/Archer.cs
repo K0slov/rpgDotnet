@@ -2,13 +2,14 @@ namespace NewDot.src.Entities
 {
     public class Archer : Hero
     {
-        public Archer(int Id, string Name, int Level, TypeClass HeroType, int Life) : base(Id, Name, Level, (TypeClass)HeroType, Life)
+        public Archer(int Id, string Name, int Level, TypeClass HeroType, int Life, int Force) : base(Id, Name, Level, (TypeClass)HeroType, Life, Force)
         {
             this.Id = Id;
             this.Name = Name;
             this.Level = Level;
             this.HeroType = (TypeClass)HeroType;
-            this.Life = 80;
+            this.Life = Life;
+            this.Force = Force;
         }
         public override string Attack(int Bonus)
         {

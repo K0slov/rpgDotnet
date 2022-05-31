@@ -86,15 +86,65 @@ class Program
             {
             Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(TypeClass), i));
             }
+            
             Console.WriteLine();
             Console.Write("Digite a classe entre as opções acima: ");
             int entradaClasse = int.Parse(Console.ReadLine());
+
+            int entradaVida = entradaClasse;
+            {
+                if(entradaVida == 1)
+                {
+                    entradaVida = 80;
+
+                }if(entradaVida == 2)
+                {
+                    entradaVida = 60; 
+
+                }if(entradaVida == 3)
+                {
+                    entradaVida = 90; 
+
+                }if(entradaVida == 4)
+                {
+                    entradaVida = 70; 
+
+                }if(entradaVida == 5)
+                {
+                    entradaVida = 80; 
+                }
+
+            int entradaForca = entradaClasse;
+            {
+                if(entradaForca == 1)
+                {
+                    entradaForca = 8;
+
+                }if(entradaForca == 2)
+                {
+                    entradaForca = 6; 
+
+                }if(entradaForca == 3)
+                {
+                    entradaForca = 9; 
+
+                }if(entradaForca == 4)
+                {
+                    entradaForca = 7; 
+
+                }if(entradaForca == 5)
+                {
+                    entradaForca = 8; 
+                }
+            }
+        
 
             Hero newHero = new Hero(id: repositorio.ProximoId(),
                                     name: entradaNome,
                                     level: 1,
                                     heroType: (TypeClass)entradaClasse,
-                                    life: 0);      
+                                    life: entradaVida,
+                                    force:entradaForca);
             repositorio.Insere(newHero);
 
         string player = NovoJogo();
@@ -107,7 +157,7 @@ class Program
         //Console.WriteLine(support.Attack(-1));
 
         player = NovoJogo();
-        }
+        }}
         private static string NovoJogo()
         {
             Console.WriteLine();

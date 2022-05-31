@@ -4,8 +4,16 @@ namespace NewDot
     {
         Wizard = 1,
         Archer = 2,
-        Warrior = 3,
-        Paladin = 4,
-        Necromancer = 5,
+        WarriorIndisponivel = 3,
+        PaladinIndisponivel = 4,
+        NecromancerIndisponivel = 5,
     }
+    // public enum LifeClass
+    // {
+    //     Wizard = 80,
+    //     Archer = 60,
+    //     Warrior = 90,
+    //     Paladin = 70,
+    //     Necromancer = 50,
+    // }
 }
